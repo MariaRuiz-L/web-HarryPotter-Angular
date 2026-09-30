@@ -1,0 +1,157 @@
+.box__container {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 20px 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.loader__box {
+  height: 100vh;
+  background-color: #423f3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #5FE3F2;
+  left: -100px;
+  box-sizing: border-box;
+  animation: shadowRolling 2s linear infinite;
+}
+
+.loader__text {
+  color: #5FE3F2;
+  font-size: 20px;
+}
+
+
+.filter__container {
+  width: 100%;
+  padding: 0 33%;
+
+}
+.form {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 1.25rem;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .input--name {
+    width: 40%;
+  }
+
+  @media (max-width: 1273px) {
+    .input--name {
+      width: 80%;
+    }
+  }
+}
+
+
+.extra__filters__container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+
+.search__btn__container{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+
+/*Responsive*/
+@media (max-width: 1273px) {
+  .search__btn__container{
+    width: 80%;
+
+  }
+
+  .extra__filters__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+  }
+
+}
+
+
+::ng-deep .p-datatable {
+  width: 100%;
+  max-width: 1200px;
+
+  .p-datatable-thead > tr > th {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .p-datatable-tbody > tr {
+    &:nth-child(odd){
+      background-color: #000;
+    }
+
+    &:nth-child(even){
+      background-color: #121212;
+    }
+    color: #e0e0e0;
+
+    & > td {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #222;
+      font-family: sans-serif;
+      vertical-align: middle;
+
+    }
+  }
+}
+
+.char-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.wiki-link {
+  color: #a29bfe;
+  text-decoration: underline;
+}
+
+

@@ -1,0 +1,59 @@
+<div class="box__container">
+
+  @if (isLoading) {
+    <div class="loader__box">
+      <span class="loader"></span>
+      <p class="loader__text">Cargando...</p>
+    </div>
+  }
+
+  <div class="filter__container">
+    <form class="form" [formGroup]="filterForm" (ngSubmit)="search()">
+      <div class="search__container"> <!--buscar nombre -->
+        <input class="input--name" pInputText type="text" id="name" placeholder="Nombre" formControlName="name_cont"/>
+      </div>
+      <div class="extra__filters__container">
+        <div>
+          <input pInputText formControlName="nationality_eq" placeholder="Origen" /><!--Escribir especie-->
+        </div>
+        <div>
+          <p-select [options]="bloodOptions" formControlName="blood_status_cont" placeholder="Tipo de sangre" ></p-select> <!--Seleccionar sangre-->
+        </div>
+        <div>
+          <p-select [options]="houseOptions" formControlName="house_eq" placeholder="Casa" ></p-select><!--Seleccionar casa-->
+        </div>
+      </div>
+      <div class="search__btn__container"><!--boton buscar-->
+        <p-button label="Buscar" [rounded]="true" severity="info" (onClick)="search()"/>
+        <p-button label="Limpiar" [rounded]="true" severity="secondary" (onClick)="cleanFilter()"/>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Tabla  -->
+  <p-table [value]="characters">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nombre</th>
+        <th>Imagen</th>
+        <th>Origen</th>
+        <th>Sangre</th>
+        <th>Casa</th>
+        <th>Wiki</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-char>
+      <tr>
+        <td>{{ char.attributes.name || 'No Information' }}</td>
+        <td>
+          <img [src]="char.attributes.image || 'assets/images/Questions.png'" class="char-img" />
+        </td>
+        <td>{{ char.attributes.nationality || 'No Information' }}</td>
+        <td>{{ char.attributes.blood_status || 'No Information' }}</td>
+        <td>{{ char.attributes.house || 'No Information' }}</td>
+        <td><a [href]="char.attributes.wiki" target="_blank" class="wiki-link">Ver Wiki</a></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

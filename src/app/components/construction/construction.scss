@@ -1,0 +1,29 @@
+.construction__container{
+  background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.construction_img {
+  max-width: 400px;
+  height: auto;
+}
+
+.construction__text {
+  color: #d4af37;
+  font-family: 'Harry Potter', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 0 0 20px #b8860b;
+  margin: 0;
+}

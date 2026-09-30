@@ -1,0 +1,16 @@
+<div class="navbar__container">
+  <div class="navbar__left" (click)="navigateTo('/main')">
+    <img src="assets/icons/harry_potter_icon.png" class="navbar__left--img"/><!--redirige al main al cliclar en la imagen, ademas debe haber una funcion(navigateTo)en.ts-->
+    <span class="navbar__left--name"> María Ruiz López</span>
+  </div>
+
+  <div class="navbar__center">
+    <div class="navbar__center--link" (click)="navigateTo('/books')"[class.active-link]="isPageActive('/books')">Libros</div>
+    <div class="navbar__center--link" (click)="navigateTo('/characters')"[class.active-link]="isPageActive('/characters')">Personajes</div>
+    <div class="navbar__center--link" (click)="navigateTo('/movies')"[class.active-link]="isPageActive('/movies')">Peliculas</div>
+    <div class="navbar__center--link" (click)="navigateTo('/potions')"[class.active-link]="isPageActive('/potions')">Pociones</div>
+    <div class="navbar__center--link" (click)="navigateTo('/spells')"[class.active-link]="isPageActive('/spells')">Hechizos</div>
+  </div>
+
+  <div class="navbar__right-placeholder"></div>
+</div>

@@ -1,0 +1,14 @@
+<div class="movies-page-container">
+  <div class="movies-grid">
+    @for (movie of movies; track movie.id) {
+      <div class="movie-card" (click)="showDetails(movie)">
+        <div class="poster-container">
+          <img [src]="movie.attributes.poster" [alt]="movie.attributes.title">
+          <div class="hover-info">
+            <span class="movie-name">{{movie.attributes.title}}</span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

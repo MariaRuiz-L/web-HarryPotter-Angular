@@ -1,0 +1,97 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.navbar__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: nowrap;
+  min-width: fit-content;
+}
+
+.navbar__left--img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.navbar__left--name {
+  white-space: nowrap !important;
+  color: white;
+  font-family: 'Harry Potter', sans-serif;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+
+/*barra central*/
+
+.navbar__center {
+  display: flex;
+  gap: 20px;
+  background-color: #423f3f;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin: 0 auto;
+  justify-content: center;
+  flex:1;
+}
+
+.navbar__right-placeholder {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__center--link {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar__center--link:hover {
+  color: #d4af37;
+
+}
+
+.active-link {
+  color: #d4af37;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar__left--name {
+    font-size: 0.8rem;
+    margin-left: 5px;
+    display: none;
+  }
+  .navbar__center {
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .navbar__center--link {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+

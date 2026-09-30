@@ -1,0 +1,77 @@
+.movies-page-container {
+  background-color: #121212;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px 200px;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  /*padding-bottom: 100px;*/
+}
+
+.movie-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  //margin-bottom: 40px;
+
+  .poster-container {
+    width: 200px;
+    height: 300px;
+    //position: relative;
+
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      object-fit: cover;
+    }
+  }
+
+    .hover-info {
+      position: absolute;
+      top: 270px;
+      width: 280px;
+      padding-bottom: 5px;
+      text-align: center;
+      letter-spacing: 2px;
+      opacity: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+
+
+      .movie-name {
+        display: block;
+        color: #d4af37;
+        font-family: 'Harry Potter', sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.1;
+        text-shadow:0 0 8px rgba(212, 175, 55, 0.4);
+      }
+    }
+
+
+
+  &:hover {
+    transform: scale(1.08);
+
+    img {
+      box-shadow: 2px 4px 32px 5px white;
+    }
+
+    .hover-info {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}

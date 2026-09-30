@@ -1,0 +1,36 @@
+<div class="books-page-container">
+  <p-accordion [multiple]="false">
+
+    @for (book of books; track book.id) {
+      <p-accordion-panel [value]="book.id">
+        <p-accordion-header>
+          {{ book.attributes.title }}
+        </p-accordion-header>
+        <p-accordion-content>
+          <div class="book-grid-layout">
+            <div class="grid-left">
+              <img [src]="book.attributes.cover" class="book-cover" alt="Portada">
+              <p class="dedication">
+                <strong>Dedicatoria:</strong> {{ book.attributes.dedication}}
+              </p>
+            </div>
+
+            <div class="grid-right">
+              <div class="summary-section">
+                <strong>Sinopsis:</strong>
+                <p>{{ book.attributes.summary }}</p>
+              </div>
+
+              <div class="stats-section">
+                <p><strong>Cantidad de páginas:</strong> {{ book.attributes.pages }}</p>
+                <p><strong>Cantidad de capítulos:</strong> {{ book.relationships.chapters.data.length}}</p>
+              </div>
+            </div>
+          </div>
+        </p-accordion-content>
+      </p-accordion-panel>
+    }
+  </p-accordion>
+</div>
+
+

@@ -1,0 +1,27 @@
+@if (movie) {
+  <div class="movie-modal-content">
+    <div class="detail-grid">
+      <!-- Portada de la película -->
+      <div class="detail-left">
+        <img [src]="movie.attributes.poster" [alt]="movie.attributes.title">
+      </div>
+      <div class="detail-right">
+
+        <!-- Título y sinopsis  -->
+        <h2 class="hp-font">{{ movie.attributes.title }}</h2>
+        <div class="summary"><strong>Sinopsis:</strong> {{ movie.attributes.summary }}</div>
+        <div class="tech-info">
+          <p><strong>Director:</strong> {{ movie.attributes.director || movie.attributes.directors }}</p>
+          <p><strong>Productores:</strong> {{ movie.attributes.producers.join(', ') }}</p>
+        </div>
+
+        <!-- Link al tráiler en nueva pestaña-->
+        <div class="link-container">
+          <a [href]="movie.attributes.trailer" target="_blank" class="trailer-link">
+            Ver tráiler
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+}
