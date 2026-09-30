@@ -12,6 +12,7 @@ Películas: sección dedicada a las películas, con portadas, información y acc
 Secciones pendientes
 Hechizos: sección pendiente de desarrollo.
 Pociones: sección pendiente de desarrollo.
+
 🛠️ Stack tecnológico
 Angular — desarrollo de la aplicación web.
 TypeScript — lenguaje de programación.
@@ -19,6 +20,7 @@ HTML — estructura de la aplicación.
 CSS — estilos y diseño.
 PrimeNG — componentes de interfaz de usuario.
 Potter DB API — obtención de información del universo de Harry Potter.
+
 📱 Diseño responsive
 La aplicación cuenta con un diseño responsive para adaptarse a diferentes tamaños de pantalla, facilitando su uso en distintos dispositivos.
 
